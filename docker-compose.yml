@@ -1,14 +1,12 @@
 version: '3.8'
 
 services:
-  superhands-frost:
-    image: registry.urbreath.tech/superhands-frost:0.0.1
+  cluj-airquality-service:
+    registry.urbreath.tech/cluj-airquality-service:0.0.1
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: superhands-frost
-    ports:
-      - "8000:8000"
+    container_name: cluj-polling-service
     env_file:
       - .env
     restart: always
